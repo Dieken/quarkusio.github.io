@@ -50,12 +50,12 @@ layout: base
 
 <div class="guide">
   <div class="grid-wrapper">
+    <div class="grid__item width-4-12 width-12-12-m">
+      <div class="hide-mobile toc">{{ page.document | tocify_asciidoc: 2 }}</div>
+    </div>
     <div class="grid__item width-8-12 width-12-12-m">
       <h1 class="text-caps">{{page.title}} {{page.docversion}}</h1>
       {{ content }}
-    </div>
-    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
-      <div class="hide-mobile toc">{{ page.document | tocify_asciidoc: 2 }}</div>
     </div>
   </div>
   {% if relations and relations[guide_url] -%}
